@@ -1,0 +1,30 @@
+﻿$background-dark: #666666;
+$background-gray: #f5f5f5;
+$background-white: #ffffff;
+
+$red: #FF5252;
+$orange: #E7746F;
+$dark-gray: rgb(135, 135, 135);
+$white-gray: rgb(235, 235, 235);
+$black: rgb(17, 17, 17);
+$dark: #222222;
+$white: #ffffff;
+
+$img-href: "../../img";
+
+$sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
+
+@mixin media($minmax, $media) {
+  @each $size, $resolution in $sizes {
+    @if $media == $size {
+      @media only screen and (#{$minmax}-width: $resolution) {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin style_text($fw, $fs) {
+  font-weight: $fw;
+  font-size: $fs;
+}

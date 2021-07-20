@@ -1,4 +1,4 @@
-﻿﻿﻿﻿$path: "../fonts/Raleway" !default;
+﻿$path: "../../fonts/Raleway";
 
 
 @font-face {
@@ -24,7 +24,6 @@
 @font-face {
 	font-family: "Raleway";
 	src: local("Raleway Medium"), local("Raleway Medium"),
-		url('#{$path}/ralewaymedium.woff2') format("woff2"),
 		url("#{$path}/ralewaymedium.woff") format("woff"),
 		url("#{$path}/ralewaymedium.ttf") format("truetype");
 	font-weight: 500;

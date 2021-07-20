@@ -1,0 +1,32 @@
+﻿@import "variables";
+
+#homePage{
+  background: url('#{$img-href}/cover.jpg') no-repeat center top fixed;
+  background-size: cover;
+  padding: 0;
+  
+  & .home-overlay{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: rgba(44, 62, 80, 0.3) url("#{$img-href}/pattern.png");
+
+    & .container{
+      width: 100%;
+      margin: auto 0;
+      text-align: center;
+      color: $white;
+      
+      & .describe{
+        @include style_text(300, 16px);
+        margin-top: 10px;
+      }
+      
+      & .title{
+        @include style_text(800, 50px);
+        text-transform: uppercase;
+        margin-top: 10px;
+      }
+    }
+  }
+}
