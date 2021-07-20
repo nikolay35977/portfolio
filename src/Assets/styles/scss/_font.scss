@@ -1,0 +1,73 @@
+﻿﻿﻿﻿$path: "../fonts/Raleway" !default;
+
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Semibold"), local("Raleway Semibold"),
+		url("#{$path}/ralewaysemibold.woff2") format("woff2"),
+		url("#{$path}/ralewaysemibold.woff") format("woff"),
+		url("#{$path}/ralewaysemibold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Bold"), local("Raleway Bold"),
+		url("#{$path}/ralewaybold.woff2") format("woff2"),
+		url("#{$path}/ralewaybold.woff") format("woff"),
+		url("#{$path}/ralewaybold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Medium"), local("Raleway Medium"),
+		url('#{$path}/ralewaymedium.woff2') format("woff2"),
+		url("#{$path}/ralewaymedium.woff") format("woff"),
+		url("#{$path}/ralewaymedium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Regular"), local("Raleway Regular"),
+		url('#{$path}/ralewayregular.woff2') format("woff2"),
+		url("#{$path}/ralewayregular.woff") format("woff"),
+		url("#{$path}/ralewayregular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Light"), local("Raleway Light"),
+		url("#{$path}/ralewaylight.woff2") format("woff2"),
+		url("#{$path}/ralewaylight.woff") format("woff"),
+		url("#{$path}/ralewaylight.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway ExtraLight"), local("Raleway ExtraLight"),
+		url("#{$path}/ralewayextralight.woff2") format("woff2"),
+		url("#{$path}/ralewayextralight.woff") format("woff"),
+		url("#{$path}/ralewayextralight.ttf") format("truetype");
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: local("Raleway Thin"), local("Raleway Thin"),
+		url("#{$path}/ralewaythin.woff2") format("woff2"),
+		url("#{$path}/ralewaythin.woff") format("woff"),
+		url("#{$path}/ralewaythin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+}
+
