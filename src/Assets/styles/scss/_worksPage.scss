@@ -1,0 +1,138 @@
+﻿@import "variables";
+
+%card_psElem {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  opacity: 0;
+  transition: transform .35s linear, opacity .35s linear;
+  border-top: 1px $white solid;
+  border-bottom: 1px $white solid;
+  box-sizing: border-box;
+}
+
+#work {
+  background-color: $white;
+  padding: 100px 0 120px;
+
+  .work_header {
+    @include header_pages();
+  }
+
+  .work_cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 60px;
+
+    .work-card {
+      display: flex;
+      position: relative;
+      overflow: hidden;
+      margin-top: 50px;
+      background-color: $brown;
+      cursor: pointer;
+      max-width: 30%;
+
+      @include media('max', 'lg') {
+        max-width: 40%;
+      }
+
+      @include media('max', 'md') {
+        max-width: 100%
+      }
+
+      & img {
+        max-width: 100%;
+        min-height: auto;
+        opacity: .7;
+        transition: opacity .35s linear;
+      }
+
+      & .title_block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        pointer-events: none;
+
+        & .title {
+          @include style_text(300, 30px);
+          margin-top: 1em;
+          color: $white;
+          transition: margin-top .2s linear;
+
+          & span {
+            font-weight: bold;
+          }
+        }
+      }
+
+      & .subtitle_block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        pointer-events: none;
+
+        & .subtitle {
+          @include style_text(300, 20px);
+          margin-top: 7em;
+          color: $white;
+          opacity: 0;
+          transition: margin-top .2s linear, opacity .2s linear;
+        }
+      }
+
+      &:after {
+        @extend %card_psElem;
+        transform: scale(0, 1);
+      }
+
+      &:before {
+        @extend %card_psElem;
+        transform: scale(1, 0);
+      }
+
+      &:hover {
+        & img {
+          opacity: .35;
+        }
+
+        & .title_block {
+          & .title {
+            margin-top: 1.5em;
+          }
+        }
+
+        & .subtitle_block {
+          & .subtitle {
+            opacity: 1;
+            margin-top: 6em;
+          }
+        }
+
+        &:after {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        &:before {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+
+}

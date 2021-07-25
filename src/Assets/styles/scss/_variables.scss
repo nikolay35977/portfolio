@@ -4,11 +4,12 @@ $background-white: #ffffff;
 
 $red: #FF5252;
 $orange: #E7746F;
-$dark-gray: rgb(135, 135, 135);
-$white-gray: rgb(235, 235, 235);
+$dark-gray: #878787;
+$white-gray: #ebebeb;
 $black: rgb(17, 17, 17);
 $dark: #222222;
 $white: #ffffff;
+$brown: #9e5406;
 
 $img-href: "../../img";
 
@@ -35,16 +36,47 @@ $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
   margin-right: auto;
   margin-left: auto;
   
-  @include media('min', 1200) {
-    width: 1170px;
-  }
-
-  @include media('min', 992) {
-    width: 970px;
-  }
-
-  @include media('min', 768) {
+  @include media('min', md) {
     width: 750px;
   }
 
+  @include media('min', lg) {
+    width: 970px;
+  }
+  
+  @include media('min', xl) {
+    width: 1170px;
+  }
+
+
+
+}
+
+@mixin header_pages() {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+
+  .title {
+    position: relative;
+    @include style_text(600, 30px);
+    text-transform: uppercase;
+    padding-bottom: 1em;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: calc(50% - 50px);
+      width: 100px;
+      height: 1px;
+      background-color: $dark-gray;
+    }
+  }
+
+  .subtitle {
+    @include style_text(300, 20px);
+    color: $dark-gray;
+    margin-top: 2em;
+  }
 }

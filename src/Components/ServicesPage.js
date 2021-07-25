@@ -8,13 +8,13 @@ import iconQuestion from './../Assets/img/question.svg';
 const ServicesCard = ({id, icon, title, text}) => {
     return (
         <div className={'services-card'} key={id}>
-            <div className="image">
-                <img src={icon} alt="mwand"/>
+            <div className='image'>
+                <img src={icon} alt={title}/>
             </div>
-            <div className="title">
+            <div className='title'>
                 {title}
             </div>
-            <div className="text">
+            <div className='text'>
                 {text}
             </div>
         </div>
@@ -45,17 +45,17 @@ const ServicesPage = (props) => {
         <>
             <NavBar/>
             <section id={'services'}>
-                <div className="container">
+                <div className='container'>
                     <div className={'services_header'}>
-                        <div className="title">
+                        <div className='title'>
                             this is what i do
                         </div>
-                        <div className="subtitle">
+                        <div className='subtitle'>
                             No one lights a lamp in order to hide it behind the door: the purpose of light is to create
                             more light, to open people’s eyes, to reveal the marvels around.
                         </div>
                     </div>
-                    <div className="services_body">
+                    <div className='services_body'>
                         {dataForCards}
                     </div>
                 </div>
