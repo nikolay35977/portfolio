@@ -2,7 +2,7 @@
 
 const HomePage = () => {
     return (
-        <div id={"homePage"}>
+        <div id={"home"}>
             <div className="home-overlay">
                 <div className="container">
                     <div className="describe">

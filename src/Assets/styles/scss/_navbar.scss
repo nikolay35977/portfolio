@@ -1,0 +1,45 @@
+﻿@import "variables";
+
+#navbar{
+  position: sticky;
+  top: 0;
+  height: 50px;
+  background-color: $white;
+  z-index: 9999;
+  
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    
+    .title{
+      @include style_text(700, 32px);
+      font-family: 'Lobster', cursive;
+      margin-left: 20px;
+    }
+    
+    .nav_list{
+      @include style_text(400, 16px);
+      margin-right: 20px;
+      
+      .nav_item{
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: color .2s linear;
+        color: $black;
+        padding: 0 20px;
+        
+        &:hover{
+          color: $orange;
+        }
+      }
+      
+      .active{
+        color: $orange;
+      }
+    }
+    
+  }
+  
+}

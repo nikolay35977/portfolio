@@ -28,3 +28,23 @@ $sizes: ("xs":320px, "sm":576px, "md":768px, "lg":992px, "xl":1200px);
   font-weight: $fw;
   font-size: $fs;
 }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include media('min', 1200) {
+    width: 1170px;
+  }
+
+  @include media('min', 992) {
+    width: 970px;
+  }
+
+  @include media('min', 768) {
+    width: 750px;
+  }
+
+}
