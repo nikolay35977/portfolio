@@ -1,0 +1,51 @@
+﻿@import "variables";
+
+#skill {
+  background-color: $background-gray;
+
+  .container {
+    padding: 120px 0 100px 0;
+
+    .skill_header {
+      @include header_pages();
+    }
+
+    .skill_cards {
+      display: flex;
+      flex-wrap: wrap;
+      
+      .skill_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 50px;
+        padding: 30px 20px 50px 20px;
+        text-align: center;
+        max-width: 20%;
+
+        @include media('max', 'lg') {
+          max-width: 20%;
+        }
+
+        @include media('max', 'md') {
+          max-width: 40%;
+        }
+
+        @include media('max', 'sm') {
+          max-width: 100%;
+        }
+        
+        & .percent{
+          margin: 50px auto;
+        }
+        
+        & .text{
+          @include style_text(700, 13px);
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $black;
+        }
+      }
+    }
+  }
+}
