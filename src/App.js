@@ -4,6 +4,7 @@ import "./Assets/styles/scss/main.scss";
 import ServicesPage from "./Components/ServicesPage";
 import WorkPage from "./Components/WorkPage";
 import SkillPage from "./Components/SkillPage";
+import SharePage from "./Components/SharePage";
 
 const App = (props) => {
   return (
@@ -12,6 +13,7 @@ const App = (props) => {
         <ServicesPage/>
         <WorkPage/>
         <SkillPage/>
+        <SharePage/>
     </div>
   );
 }

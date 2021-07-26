@@ -1,0 +1,32 @@
+﻿@import "variables";
+
+#share{
+  background: url("./../../img/share_back.jpg") no-repeat 0 0;
+  background-size: cover;
+  padding: 50px 0;
+  text-align: center;
+  
+  .container{
+    
+    .title{
+      @include style_text(700, 20px);
+      margin-bottom: 30px;
+    }
+    .subtitle{
+      @include style_text(300, 15px);
+      margin-bottom: 30px;
+    }
+    .btn{
+      padding: 1em 3em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: black;
+      background-color: $white-gray;
+      transition: background-color .2s linear;
+      
+      &:hover{
+      background-color: $white;
+      }
+    }
+  }
+}
