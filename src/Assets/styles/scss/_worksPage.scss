@@ -9,8 +9,6 @@
   bottom: 30px;
   opacity: 0;
   transition: transform .35s linear, opacity .35s linear;
-  border-top: 1px $white solid;
-  border-bottom: 1px $white solid;
   box-sizing: border-box;
 }
 
@@ -96,11 +94,17 @@
       &:after {
         @extend %card_psElem;
         transform: scale(0, 1);
+
+        border-top: 1px $white solid;
+        border-bottom: 1px $white solid;
       }
 
       &:before {
         @extend %card_psElem;
         transform: scale(1, 0);
+
+        border-right: 1px $white solid;
+        border-left: 1px $white solid;
       }
 
       &:hover {
