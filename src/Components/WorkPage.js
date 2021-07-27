@@ -17,7 +17,7 @@ const WorkCard = ({text, title}) => {
 
 const WorkPage = (props) => {
     return (
-        <div id={'work'}>
+        <div id={'works'}>
             <div className='container'>
                 <div className={'work_header'}>
                     <div className='title'>

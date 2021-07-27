@@ -15,7 +15,7 @@ const SkillCard = (props) => {
 
 const SkillPage = (props) => {
     return (
-        <section id='skill'>
+        <section id='skills'>
             <div className={'container'}>
                 <div className={'skill_header'}>
                     <div className='title'>

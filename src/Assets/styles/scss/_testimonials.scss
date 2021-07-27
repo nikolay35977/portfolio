@@ -1,0 +1,66 @@
+﻿@import "variables";
+
+#testimonials {
+  background-color: $background-gray;
+  padding: 120px 0 100px 0;
+
+  .container {
+    .testimonials_header {
+      @include header_pages();
+    }
+
+    .testimonialsCards {
+      margin-top: 50px;
+
+      .testimonialsCard {
+        position: relative;
+        min-height: 200px;
+        padding: 50px 0;
+
+        & .body {
+          display: flex;
+          .title {
+            @include style_text(300, 2em);
+            margin-right: 20px;
+            color: $dark-gray;
+          }
+
+          & img {
+            max-width: 200px;
+            min-height: auto;
+            float: right;
+          }
+        }
+        
+        & .footer{
+          @include style_text(300, 1.3em);
+          
+          &:before{
+            content: '― ';
+            color: $dark-gray;
+          }
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          width: 1%;
+          height: 1px;
+          background-color: $red;
+          animation-duration: 5s;
+          animation-name: loading;
+
+          @keyframes loading {
+            to {
+              width: 100%;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}
