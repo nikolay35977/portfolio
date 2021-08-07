@@ -16,9 +16,9 @@ const NavBar = (props) => {
     return (
         <nav id={'navbar'}>
             <div className='container'>
-                <div className='title'>
+                <a className='title' href={'#home'}>
                     Nikolay
-                </div>
+                </a>
                 <div className='nav_list'>
                     {NavList}
                 </div>

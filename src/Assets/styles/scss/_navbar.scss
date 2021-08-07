@@ -16,7 +16,14 @@
     .title{
       @include style_text(700, 32px);
       font-family: 'Lobster', cursive;
+      text-decoration: none;
+      color: $black;
       margin-left: 20px;
+      transition: color .2s linear;
+      
+      &:hover{
+        color: $dark-gray;
+      }
     }
     
     .nav_list{

@@ -1,0 +1,75 @@
+﻿@import "variables";
+
+#contact {
+  background-color: $white;
+  padding: 150px 0 100px;
+
+  .container {
+    .contact_header {
+      @include header_pages();
+    }
+
+    #contactForm {
+      display: flex;
+      flex-direction: column;
+      max-width: 50%;
+      margin: 70px auto 0 auto;
+
+      .label {
+        width: 100%;
+
+        .form-control {
+          @include style_text(500, 15px);
+
+          width: 100%;
+          height: 35px;
+          margin-top: 1.5em;
+          padding: 0 15px;
+          color: $black;
+
+          border-radius: 3px;
+          border: 1px solid $white-gray;
+          outline: none;
+          letter-spacing: 2px;
+
+          transition: border-color .2s linear;
+
+          &:focus {
+            border-color: $dark-gray;
+          }
+
+          &::placeholder {
+            @include style_text(300, 15px);
+            color: $dark-gray;
+          }
+
+        }
+
+        textarea.form-control {
+          height: auto;
+          padding: 15px;
+        }
+
+      }
+
+      .submit {
+        @include style_text(500, 15px);
+        width: 100%;
+        padding: 10px 25px;
+        color: $white;
+        background-color: rgba($dark, .8);
+        transition: background-color .2s linear;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-top: 1.5em;
+
+        border-radius: 3px;
+
+
+        &:hover {
+          background-color: $dark;
+        }
+      }
+    }
+  }
+}

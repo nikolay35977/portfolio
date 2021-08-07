@@ -9,6 +9,8 @@ body {
     font-family: "Raleway", sans-serif;
     background: #666666 !important;
 }
-*{
+
+* {
+    font-family: "Raleway", sans-serif;
     box-sizing: border-box;
 }

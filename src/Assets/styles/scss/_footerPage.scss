@@ -1,0 +1,57 @@
+﻿@import "variables";
+
+#footer{
+  background-color: $black;
+  padding: 50px 0;
+  
+  .container{
+    display: flex;
+    flex-direction: column;
+    
+    .social-links{
+      display: flex;
+      margin: auto;
+      
+      .social{
+        display: flex;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba($white-gray, .6);
+        margin-right: 20px;
+        border-radius: 3px;
+        transition: color .2s linear, border-color .2s linear;
+        cursor: pointer;
+        
+        &:hover{
+          border-color: $white-gray;
+          text-decoration: none;
+          
+          svg path,
+          svg polygon{
+            fill: $white-gray;
+          }
+        }
+        
+        svg{
+          margin: auto;
+          
+          path, polygon{
+            fill: rgba($white-gray, .6);
+            transition: fill .2s linear ;
+          }
+        }
+      }
+    }
+    
+    .copyright{
+      @include style_text(500, 16px);
+      margin: 20px auto 0 auto;
+      color: $white;
+      
+      span{
+        color: $red;
+      }
+    }
+    
+  }
+}
