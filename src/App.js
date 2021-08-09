@@ -14,9 +14,8 @@ const App = (props) => {
     const handleScroll = () => {
         let dict = ['home', 'services', 'works', 'skills', 'testimonials', 'contact'];
         dict = dict.map(el => {
-            console.log(el);
             let value = document.querySelector(`#${el}`).getBoundingClientRect();
-            return {[el] :Math.ceil(value.height + 1) > Math.ceil(value.top + value.height) && Math.ceil(value.top + value.height) > 0}
+            return {[el] : (Math.floor(value.height) >= Math.floor(value.top + value.height)) && (value.top + value.height > 1)}
         });
         setNavigation(dict);
     };

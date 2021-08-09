@@ -1,7 +1,6 @@
 ﻿import React from 'react';
 
 const NavBarItems = (props) => {
-    console.log(props.isActive);
     return (
         <span>
             <a href={'#' + props.text} className={'nav_item ' + (props.isActive && 'active')}>
