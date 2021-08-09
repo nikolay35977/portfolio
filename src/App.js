@@ -10,18 +10,37 @@ import ContactPage from "./Components/ContactPage";
 import FooterPage from "./Components/FooterPage";
 
 const App = (props) => {
-  return (
-    <div>
-        <HomePage/>
-        <ServicesPage/>
-        <WorkPage/>
-        <SkillPage/>
-        <SharePage/>
-        <TestimonialsPage/>
-        <ContactPage/>
-        <FooterPage/>
-    </div>
-  );    
+    let [navigation, setNavigation] = React.useState([]);
+    const handleScroll = () => {
+        let dict = ['home', 'services', 'works', 'skills', 'testimonials', 'contact'];
+        dict = dict.map(el => {
+            console.log(el);
+            let value = document.querySelector(`#${el}`).getBoundingClientRect();
+            return {[el] :Math.ceil(value.height + 1) > Math.ceil(value.top + value.height) && Math.ceil(value.top + value.height) > 0}
+        });
+        setNavigation(dict);
+    };
+    React.useEffect(() => {
+        window.addEventListener('scroll', handleScroll, {
+            passive: true
+        });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+    return (
+        <div>
+            <HomePage/>
+            <ServicesPage navigation={navigation}/>
+            <WorkPage/>
+            <SkillPage/>
+            <SharePage/>
+            <TestimonialsPage/>
+            <ContactPage/>
+            <FooterPage/>
+        </div>
+    );
 }
 
 export default App;

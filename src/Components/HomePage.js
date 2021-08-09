@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import {Arrow_svg} from "../Common/svg";
 
 const HomePage = () => {
     return (
@@ -15,6 +16,11 @@ const HomePage = () => {
                         creating modern and responsive Web Application
                     </div>
                 </div>
+                <a className='animation' href={'#services'}>
+                    <span className='arrow_container'>
+                        <Arrow_svg width={'20px'} height={'20px'}/>
+                    </span>
+                </a>
             </div>
         </div>
     )

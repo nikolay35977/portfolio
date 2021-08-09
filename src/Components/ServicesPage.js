@@ -40,10 +40,10 @@ const ServicesPage = (props) => {
         text: 'Good things come to those who wait, but only the things left by those who hustle'
     }] 
     dataForCards = dataForCards.map((el, id) => <ServicesCard id={el.title + id} {...el}/>)
-
+    
     return (
         <>
-            <NavBar/>
+            <NavBar navigation={props.navigation}/>
             <section id={'services'}>
                 <div className='container'>
                     <div className={'services_header'}>
