@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const SkillCard = (props) => {
     return (
@@ -17,15 +18,17 @@ const SkillPage = (props) => {
     return (
         <section id='skills'>
             <div className={'container'}>
-                <div className={'skill_header'}>
-                    <div className='title'>
-                        my skills
+                <ScrollAnimation animateIn='fadeIn'>
+                    <div className={'skill_header'}>
+                        <div className='title'>
+                            my skills
+                        </div>
+                        <div className='subtitle'>
+                            No one lights a lamp in order to hide it behind the door: the purpose of light is to create
+                            more light, to open people’s eyes, to reveal the marvels around.
+                        </div>
                     </div>
-                    <div className='subtitle'>
-                        No one lights a lamp in order to hide it behind the door: the purpose of light is to create
-                        more light, to open people’s eyes, to reveal the marvels around.
-                    </div>
-                </div>
+                </ScrollAnimation>
                 <div className={'skill_cards'}>
                     <SkillCard/>
                 </div>

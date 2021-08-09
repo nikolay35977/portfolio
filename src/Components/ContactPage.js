@@ -1,4 +1,5 @@
 ﻿import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const ContactForm = (props) => {
     const [name, setName] = React.useState(''),
@@ -41,15 +42,17 @@ const ContactPage = (props) => {
     return (
         <section id={'contact'}>
             <div className={'container'}>
-                <div className={'contact_header'}>
-                    <div className='title'>
-                        DROP ME A LINE
+                <ScrollAnimation animateIn='fadeIn'>
+                    <div className={'contact_header'}>
+                        <div className='title'>
+                            DROP ME A LINE
+                        </div>
+                        <div className='subtitle'>
+                            No one lights a lamp in order to hide it behind the door: the purpose of light is to create
+                            more light, to open people’s eyes, to reveal the marvels around.
+                        </div>
                     </div>
-                    <div className='subtitle'>
-                        No one lights a lamp in order to hide it behind the door: the purpose of light is to create
-                        more light, to open people’s eyes, to reveal the marvels around.
-                    </div>
-                </div>
+                </ScrollAnimation>
                 <ContactForm/>
             </div>
         </section>

@@ -1,5 +1,6 @@
 ﻿import React from 'react';
 import image from './../Assets/img/share_back.jpg'
+import ScrollAnimation from 'react-animate-on-scroll';
 
 const TestimonialsCard = (props) => {
     return (
@@ -24,15 +25,17 @@ const TestimonialsPage = (props) => {
     return (
         <section id={'testimonials'}>
             <div className={'container'}>
-                <div className={'testimonials_header'}>
-                    <div className='title'>
-                        What my clients say
+                <ScrollAnimation animateIn='fadeIn'>
+                    <div className={'testimonials_header'}>
+                        <div className='title'>
+                            What my clients say
+                        </div>
+                        <div className='subtitle'>
+                            No one lights a lamp in order to hide it behind the door: the purpose of light is to create
+                            more light, to open people’s eyes, to reveal the marvels around.
+                        </div>
                     </div>
-                    <div className='subtitle'>
-                        No one lights a lamp in order to hide it behind the door: the purpose of light is to create
-                        more light, to open people’s eyes, to reveal the marvels around.
-                    </div>
-                </div>
+                </ScrollAnimation>
                 <div className={'testimonialsCards'}>
                     <TestimonialsCard/>
                 </div>
