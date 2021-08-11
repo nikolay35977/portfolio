@@ -5,6 +5,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const TestimonialsCard = (props) => {
     return (
         <div className={'testimonialsCard'}>
+            {props.id}
             <div className={'body'}>
                 <div className='title'>
                     Work with John was a pleasure. He understood exactly what I wanted and created an awesome site for
@@ -22,6 +23,12 @@ const TestimonialsCard = (props) => {
 }
 
 const TestimonialsPage = (props) => {
+    let testimonialsCards = ['1', '2', '3'];
+    const [currentCardId, setCurrentCardId] = React.useState(0);
+    testimonialsCards = testimonialsCards.map(el => <TestimonialsCard id={el}/>)
+    setTimeout(() => {
+        setCurrentCardId(currentCardId >= testimonialsCards.length - 1 ? 0 : currentCardId + 1);
+    }, 10000)
     return (
         <section id={'testimonials'}>
             <div className={'container'}>
@@ -37,7 +44,7 @@ const TestimonialsPage = (props) => {
                     </div>
                 </ScrollAnimation>
                 <div className={'testimonialsCards'}>
-                    <TestimonialsCard/>
+                    {testimonialsCards[currentCardId]}
                 </div>
             </div>
         </section>

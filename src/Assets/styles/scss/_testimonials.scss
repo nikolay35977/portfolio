@@ -19,6 +19,23 @@
 
         & .body {
           display: flex;
+          animation: opacityCard 10s infinite;
+          
+          @keyframes opacityCard {
+            0%{
+              opacity: 0;
+            }
+            15%{
+              opacity: 1;
+            }
+            85%{
+              opacity: 1;
+            }
+            100%{
+              opacity: 0;
+            }
+          }
+          
           .title {
             @include style_text(300, 2em);
             margin-right: 20px;
@@ -34,6 +51,7 @@
         
         & .footer{
           @include style_text(300, 1.3em);
+          animation: opacityCard 10s infinite;
           
           &:before{
             content: '― ';
@@ -50,8 +68,7 @@
           width: 1%;
           height: 1px;
           background-color: $red;
-          animation-duration: 5s;
-          animation-name: loading;
+          animation: 10s infinite loading;
 
           @keyframes loading {
             to {

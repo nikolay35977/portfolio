@@ -9,7 +9,7 @@ import ScrollAnimation from 'react-animate-on-scroll';
 const ServicesCard = ({id, icon, title, text}) => {
     return (
         <div className={'services-card'} key={id}>
-            <ScrollAnimation animateIn={id[id.length - 1] > 1 ? 'bounceInRight' : 'bounceInLeft'}>
+            <ScrollAnimation animateIn={id[id.length - 1] > 1 ? 'bounceInRight' : 'bounceInLeft'} duration={3}>
                 <div className='image'>
                     <img src={icon} alt={title}/>
                 </div>
