@@ -33,7 +33,7 @@ const App = (props) => {
             <HomePage/>
             <ServicesPage navigation={navigation}/>
             <WorkPage/>
-            <SkillPage/>
+            <SkillPage onPage = {navigation.length ? navigation[3].skills : null}/>
             <SharePage/>
             <TestimonialsPage/>
             <ContactPage/>

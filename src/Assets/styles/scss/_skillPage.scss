@@ -13,7 +13,8 @@
     .skill_cards {
       display: flex;
       flex-wrap: wrap;
-      
+      justify-content: space-between;
+
       .skill_card {
         display: flex;
         flex-direction: column;
@@ -34,12 +35,38 @@
         @include media('max', 'sm') {
           max-width: 100%;
         }
-        
-        & .percent{
+
+        & .percent__inner {
+          width: 175px;
+          height: 175px;
+          display: flex;
+          position: relative;
           margin: 50px auto;
+
+          .percent {
+            @include style_text(300, 25px);
+            color: $dark-gray;
+            margin: auto;
+            
+            &:after{
+              content: "%";
+              font-size: 50%;
+              margin-left: .1em;
+            }
+          }
+
+          .circle {
+            position: absolute;
+
+            .canvas {
+              width: 175px;
+              height: 175px;
+            }
+          }
+
         }
-        
-        & .text{
+
+        & .text {
           @include style_text(700, 13px);
           text-transform: uppercase;
           letter-spacing: 1px;
